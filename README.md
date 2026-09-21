@@ -1,4 +1,6 @@
-# Automated Weekly HR MIS Workforce Analytics System
+![Python](https://img.shields.io/badge/Python-Pandas-green) ![MySQL](https://img.shields.io/badge/Database-MySQL-blue) ![Power%20BI](https://img.shields.io/badge/BI-Power%20BI-yellow) ![n8n](https://img.shields.io/badge/Automation-n8n-orange)
+
+# Automated Weekly HR MIS & Workforce Analytics System
 
 A practical HR attendance analytics and MIS automation project using **Python, Pandas, MySQL, Power BI, and n8n**.
 
@@ -6,9 +8,7 @@ The main goal of the project is to clean HR attendance data, validate it, analyz
 
 ## Project Overview
 
-The project uses attendance data for **60 fictional employees**.
-
-The analysis covers:
+The project uses attendance data for **60 fictional employees** and covers:
 
 - Attendance status
 - Department
@@ -37,13 +37,13 @@ Data Cleaning & Validation
         ↓
 MySQL
         ↓
-SQL Analysis
+SQL KPI / Business Analysis
         ↓
 Power BI Dashboard
         ↓
 n8n Automation
         ↓
-Weekly HR MIS Reporting
+Weekly HR MIS Email
 ```
 
 ## What I Did
@@ -67,13 +67,41 @@ Used SQL queries to check:
 
 Created SQL queries to analyze attendance and workforce information by different employee attributes.
 
+The KPI logic is maintained in the SQL layer so the reporting process uses consistent metric definitions.
+
 ### 4. Power BI Dashboard
 
 Created an HR MIS dashboard to present attendance KPIs and trends for regular HR reporting.
 
 ### 5. n8n Workflow Automation
 
-Used n8n to design the workflow for automating the weekly HR MIS reporting process, reducing the need for repetitive manual reporting steps.
+Built an **11-node n8n workflow** for the weekly HR MIS reporting process.
+
+The workflow includes:
+
+```text
+Weekly Schedule
+      ↓
+Read HR Attendance CSV
+      ↓
+Extract CSV Data
+      ↓
+Validate Data Quality
+      ↓
+Validation Check
+      ↓
+Calculate HR Metrics
+      ↓
+Fetch HR Metrics from MySQL
+      ↓
+Prepare Email Report
+      ↓
+Build Email Message
+      ↓
+Send Weekly HR MIS Email
+```
+
+The workflow includes a **validation gate** before report delivery. If the data-quality check fails, the report distribution path is not allowed to continue.
 
 ## Attendance Data
 
@@ -86,6 +114,26 @@ The project includes these attendance statuses:
 | Absent | 267 |
 | Leave | 223 |
 | Half Day | 123 |
+| **Total** | **7,557** |
+
+## Key Results
+
+| KPI | Value |
+|---|---:|
+| Attendance rate* | 91.89% |
+| Absenteeism rate | 3.53% |
+| Total leave records | 223 |
+| Total overtime hours | 2,011 |
+
+*Attendance rate is calculated using Present + WFH records divided by total records.
+
+## Dashboard Preview
+
+Power BI dashboard screenshots will be added here.
+
+## n8n Workflow Preview
+
+The repository includes the n8n workflow design used for the weekly HR MIS automation.
 
 ## Repository Files
 
@@ -106,7 +154,7 @@ The project includes these attendance statuses:
 
 **Power BI:** KPI reporting, dashboard development, HR analytics
 
-**Automation:** n8n workflow automation, workflow design, recurring MIS reporting
+**Automation:** n8n workflow automation, validation gates, MySQL integration, recurring MIS reporting
 
 **Tools:** Git, GitHub
 
@@ -118,9 +166,8 @@ It also helped me understand how data quality affects the results shown in busin
 
 ## Future Improvements
 
-- Automate weekly report distribution
 - Add scheduled database refresh
-- Add automated data-quality alerts
+- Add automated data-quality alerting beyond the current validation gate
 - Add more HR KPIs
 - Connect the workflow to a live HR data source
 
