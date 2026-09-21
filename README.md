@@ -1,8 +1,8 @@
 # Automated Weekly HR MIS Workforce Analytics System
 
-A practical HR attendance analytics project using **Python, Pandas, MySQL, Power BI, and Git**.
+A practical HR attendance analytics and MIS automation project using **Python, Pandas, MySQL, Power BI, and n8n**.
 
-The main goal of the project is to clean HR attendance data, validate it, analyze attendance patterns, and present the results through a Power BI MIS dashboard.
+The main goal of the project is to clean HR attendance data, validate it, analyze attendance patterns, create a Power BI MIS dashboard, and automate the weekly reporting workflow.
 
 ## Project Overview
 
@@ -23,6 +23,7 @@ The analysis covers:
 - **Python & Pandas** – data cleaning and preparation
 - **MySQL** – storing, validating, and analyzing data
 - **Power BI** – dashboard and KPI reporting
+- **n8n** – workflow automation for the weekly MIS reporting process
 - **Git & GitHub** – version control
 
 ## Project Workflow
@@ -39,6 +40,10 @@ MySQL
 SQL Analysis
         ↓
 Power BI Dashboard
+        ↓
+n8n Automation
+        ↓
+Weekly HR MIS Reporting
 ```
 
 ## What I Did
@@ -64,7 +69,11 @@ Created SQL queries to analyze attendance and workforce information by different
 
 ### 4. Power BI Dashboard
 
-Created an HR MIS dashboard to present attendance KPIs and trends in a format that can be used for regular HR reporting.
+Created an HR MIS dashboard to present attendance KPIs and trends for regular HR reporting.
+
+### 5. n8n Workflow Automation
+
+Used n8n to design the workflow for automating the weekly HR MIS reporting process, reducing the need for repetitive manual reporting steps.
 
 ## Attendance Data
 
@@ -97,13 +106,15 @@ The project includes these attendance statuses:
 
 **Power BI:** KPI reporting, dashboard development, HR analytics
 
+**Automation:** n8n workflow automation, workflow design, recurring MIS reporting
+
 **Tools:** Git, GitHub
 
 ## What I Learned
 
-Through this project, I practiced taking an HR dataset from the cleaning stage through SQL analysis and finally into a Power BI report.
+Through this project, I practiced taking an HR dataset from the cleaning stage through SQL analysis and Power BI reporting, and then connecting the reporting process with an automation workflow using n8n.
 
-It also helped me understand how data quality affects the results shown in business reports.
+It also helped me understand how data quality affects the results shown in business reports and how repetitive reporting tasks can be automated.
 
 ## Future Improvements
 
@@ -117,4 +128,4 @@ It also helped me understand how data quality affects the results shown in busin
 
 **Adithya**
 
-Data Analytics | SQL | Power BI | Python
+Data Analytics | SQL | Power BI | Python | n8n
