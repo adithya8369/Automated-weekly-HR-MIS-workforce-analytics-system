@@ -1,74 +1,76 @@
-# Automated Weekly HR MIS & Workforce Analytics System
+# Automated Weekly HR MIS Workforce Analytics System
 
-An end-to-end HR attendance analytics project designed to transform workforce attendance data into a structured MIS reporting and business-analysis workflow using **MySQL, Power BI, Python, and n8n**.
+A practical HR attendance analytics project using **Python, Pandas, MySQL, Power BI, and Git**.
 
-The project focuses on data validation, attendance analysis, workforce KPIs, and management-ready reporting.
+The main goal of the project is to clean HR attendance data, validate it, analyze attendance patterns, and present the results through a Power BI MIS dashboard.
 
-## 📌 Project Overview
+## Project Overview
 
-HR teams often work with attendance data containing inconsistent values, missing fields, and different employee attributes. This project demonstrates how raw HR attendance data can be cleaned, validated, analyzed, and converted into an interactive Power BI MIS report.
+The project uses attendance data for **60 fictional employees**.
 
-### Business Objectives
+The analysis covers:
 
-- Track employee attendance and workforce trends
-- Monitor Present, WFH, Absent, Leave, and Half Day status
-- Analyze attendance by department, location, employee type, and shift
-- Validate HR data quality before reporting
-- Create reusable SQL analysis and validation queries
-- Present management-friendly KPIs through Power BI
-- Support a repeatable weekly MIS reporting workflow
+- Attendance status
+- Department
+- Location
+- Employee type
+- Shift
+- Work hours
+- Overtime hours
 
-## 🛠️ Tools & Technologies
+## Tools Used
 
-| Tool | Purpose |
-|---|---|
-| **Python / Pandas** | Data cleaning and preparation |
-| **MySQL** | Data storage, validation, and SQL analysis |
-| **Power BI** | Interactive HR MIS dashboard and visualization |
-| **n8n** | Workflow automation concept for recurring MIS reporting |
-| **Git & GitHub** | Version control and project documentation |
+- **Python & Pandas** – data cleaning and preparation
+- **MySQL** – storing, validating, and analyzing data
+- **Power BI** – dashboard and KPI reporting
+- **Git & GitHub** – version control
 
-## 🔄 Project Workflow
+## Project Workflow
 
 ```text
-HR Attendance Data
+Raw HR Attendance Data
+        ↓
+Python / Pandas
         ↓
 Data Cleaning & Validation
         ↓
-MySQL Database
+MySQL
         ↓
-SQL Analysis & Business Queries
+SQL Analysis
         ↓
-Power BI HR MIS Dashboard
-        ↓
-Weekly MIS Reporting Workflow
-        ↓
-Management Insights
+Power BI Dashboard
 ```
 
-## 📊 Dataset
+## What I Did
 
-The HR attendance dataset represents workforce attendance records across **60 fictional employees**.
+### 1. Data Cleaning
 
-The cleaned project data contains attendance records with fields such as:
+Used Python and Pandas to work with the raw attendance data and identify data-quality issues such as missing values and inconsistent records.
 
-- Employee ID
-- Date
-- Department
-- Location
-- Employee Type
-- Shift
-- Status
-- Work Hours
-- Overtime Hours
+### 2. Data Validation
 
-The project includes validation checks for missing values, duplicate employee/date combinations, allowed categorical values, and logical working-hour conditions.
+Used SQL queries to check:
 
-## 📈 Attendance Status Distribution
+- Missing values
+- Duplicate Employee ID + Date records
+- Invalid department and location values
+- Invalid employee types and shifts
+- Invalid attendance statuses
+- Work-hour consistency
 
-The final cleaned attendance analysis contains the following status counts:
+### 3. SQL Analysis
 
-| Attendance Status | Records |
+Created SQL queries to analyze attendance and workforce information by different employee attributes.
+
+### 4. Power BI Dashboard
+
+Created an HR MIS dashboard to present attendance KPIs and trends in a format that can be used for regular HR reporting.
+
+## Attendance Data
+
+The project includes these attendance statuses:
+
+| Status | Records |
 |---|---:|
 | Present | 6,319 |
 | WFH | 625 |
@@ -76,107 +78,43 @@ The final cleaned attendance analysis contains the following status counts:
 | Leave | 223 |
 | Half Day | 123 |
 
-**Total records:** 7,557 status-classified records in the final analysis.
+## Repository Files
 
-> Note: The repository contains the SQL and Power BI implementation used for the project. The figures above describe the final analysis state used during project development.
-
-## 🔍 Key Analysis Areas
-
-### Workforce Attendance
-- Attendance volume and status distribution
-- Daily and weekly attendance trends
-- Employee attendance patterns
-
-### Department Analysis
-- Attendance by department
-- Workforce distribution
-- Department-level attendance trends
-
-### Location Analysis
-- Office/location-wise attendance
-- WFH patterns
-- Workforce distribution by location
-
-### Shift & Employee Type
-- Shift-wise attendance
-- Employee-type analysis
-- Attendance behavior across workforce segments
-
-### Work Hours & Overtime
-- Average work hours
-- Overtime analysis
-- Identification of unusual working-hour patterns
-
-## 🧹 Data Quality & Validation
-
-The project includes SQL validation logic to check:
-
-- Missing employee and attendance attributes
-- Duplicate Employee ID + Date combinations
-- Invalid department/location values
-- Invalid employee types and shifts
-- Invalid attendance statuses
-- Logical consistency between attendance status and working hours
-- Work-hour and overtime values
-
-This ensures that the data used for management reporting is validated before analysis.
-
-## 📁 Repository Contents
-
-| File | Description |
+| File | Purpose |
 |---|---|
 | `HR_MIS_analysis.pbix` | Power BI HR MIS dashboard |
-| `hr_MIS_1.sql` | Attendance table setup and SQL analysis |
-| `hr_business_analysis.sql` | Business-focused HR analysis queries |
-| `hr_mis_validation.sql` | Data-quality and validation queries |
-| `hr_mis.sql` | HR MIS database/SQL scripts |
+| `hr_MIS_1.sql` | Attendance table and SQL analysis |
+| `hr_business_analysis.sql` | HR business analysis queries |
+| `hr_mis_validation.sql` | Data validation queries |
+| `hr_mis.sql` | HR MIS SQL scripts |
 | `README.md` | Project documentation |
 
-## 💼 Business Value
+## Key Skills
 
-This project demonstrates how HR attendance data can be converted from raw operational records into structured information for management reporting.
+**Python:** Pandas, data cleaning, data validation
 
-It demonstrates practical skills in:
+**SQL:** MySQL, filtering, grouping, aggregations, joins, validation queries
 
-- Data cleaning
-- Data validation
-- SQL querying
-- Workforce analytics
-- KPI development
-- Power BI reporting
-- MIS reporting
-- Workflow automation
-- Business-oriented data analysis
+**Power BI:** KPI reporting, dashboard development, HR analytics
 
-## 🎯 Key Skills Demonstrated
+**Tools:** Git, GitHub
 
-**Data Analytics:** Python, Pandas, Data Cleaning, Data Validation
+## What I Learned
 
-**SQL:** MySQL, Aggregations, Joins, Filtering, Grouping, Business Analysis, Validation Queries
+Through this project, I practiced taking an HR dataset from the cleaning stage through SQL analysis and finally into a Power BI report.
 
-**Business Intelligence:** Power BI, KPI Reporting, Workforce Dashboards
+It also helped me understand how data quality affects the results shown in business reports.
 
-**Automation:** n8n workflow design for recurring MIS reporting
+## Future Improvements
 
-**Version Control:** Git, GitHub
+- Automate weekly report distribution
+- Add scheduled database refresh
+- Add automated data-quality alerts
+- Add more HR KPIs
+- Connect the workflow to a live HR data source
 
-## 🚀 Future Enhancements
-
-Potential extensions to the project include:
-
-- Automated weekly email/report distribution
-- Scheduled database refresh
-- Automated data-quality alerts
-- Additional HR KPIs such as absenteeism rate and overtime rate
-- Employee-level trend analysis
-- Integration with an HR information system
-
-## 👨‍💻 Project Author
+## Author
 
 **Adithya**
 
 Data Analytics | SQL | Power BI | Python
-
----
-
-⭐ This project was created as a practical HR analytics and MIS reporting project to demonstrate end-to-end data analysis and business intelligence skills.
