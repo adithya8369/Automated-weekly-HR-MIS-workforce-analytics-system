@@ -173,6 +173,6 @@ It also helped me understand how data quality affects the results shown in busin
 
 **Adithya Aravind Kadamanchi**
 
-[LinkedIn](https://www.linkedin.com/in/your-name/)
+[LinkedIn](https://www.linkedin.com/in/adithya-kadamanchi/)
 
 Data Analytics | SQL | Power BI | Python | n8n
