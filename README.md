@@ -1,5 +1,3 @@
-![Python](https://img.shields.io/badge/Python-Pandas-green) ![MySQL](https://img.shields.io/badge/Database-MySQL-blue) ![Power%20BI](https://img.shields.io/badge/BI-Power%20BI-yellow) ![n8n](https://img.shields.io/badge/Automation-n8n-orange)
-
 # Automated Weekly HR MIS & Workforce Analytics System
 
 A practical HR attendance analytics and MIS automation project using **Python, Pandas, MySQL, Power BI, and n8n**.
@@ -77,7 +75,7 @@ Created an HR MIS dashboard to present attendance KPIs and trends for regular HR
 
 Built an **11-node n8n workflow** for the weekly HR MIS reporting process.
 
-The workflow includes:
+The automation takes the attendance data through validation and metric calculation, checks whether the data is valid, retrieves the required metrics from MySQL, and prepares the weekly MIS email.
 
 ```text
 Weekly Schedule
@@ -101,7 +99,7 @@ Build Email Message
 Send Weekly HR MIS Email
 ```
 
-The workflow includes a **validation gate** before report delivery. If the data-quality check fails, the report distribution path is not allowed to continue.
+The **validation check acts as a gate** before the report is sent. If the data-quality check fails, the reporting path does not continue.
 
 ## Attendance Data
 
@@ -129,11 +127,11 @@ The project includes these attendance statuses:
 
 ## Dashboard Preview
 
-Power BI dashboard screenshots will be added here.
+Add your Power BI dashboard screenshot here so the project can be understood quickly.
 
 ## n8n Workflow Preview
 
-The repository includes the n8n workflow design used for the weekly HR MIS automation.
+Add your n8n automation screenshot here. A clear workflow screenshot helps show how the weekly reporting process is automated from data input through validation, analysis, and email delivery.
 
 ## Repository Files
 
@@ -173,6 +171,8 @@ It also helped me understand how data quality affects the results shown in busin
 
 ## Author
 
-**Adithya**
+**Adithya Aravind Kadamanchi**
+
+[LinkedIn](https://www.linkedin.com/in/your-name/)
 
 Data Analytics | SQL | Power BI | Python | n8n
