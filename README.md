@@ -131,7 +131,9 @@ Add your Power BI dashboard screenshot here so the project can be understood qui
 
 ## n8n Workflow Preview
 
-Add your n8n automation screenshot here. A clear workflow screenshot helps show how the weekly reporting process is automated from data input through validation, analysis, and email delivery.
+The weekly HR MIS reporting process is automated using n8n, from attendance data validation and HR metric calculation to MySQL integration and weekly email reporting.
+
+![n8n Workflow](n8n_workflow.png)
 
 ## Repository Files
 
